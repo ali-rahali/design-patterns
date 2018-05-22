@@ -50,6 +50,9 @@ public class MallardDuckTest {
         Assert.assertEquals(String.format("Wings are waving%n"), customOutputStream.toString());
     }
 
+    /**
+     * Tests default quacking capabilities of {@link MallardDuck} creature
+     */
     @Test
     public void shouldQuack() {
         MallardDuck mallardDuck = new MallardDuck();
