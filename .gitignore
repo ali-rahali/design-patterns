@@ -1,5 +1,6 @@
 # Files and directories listed here will not be tracked by Git VCS
 
-.gradle
-.idea
+.gradle/
+.idea/
+out/
 design-patterns.iml
