@@ -1,7 +1,5 @@
 package design.object.chapter01.behavior;
 
-import design.object.chapter01.behavior.QuackBehavior;
-
 /**
  * Some duck species cannot quack
  */

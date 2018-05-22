@@ -1,5 +1,6 @@
 package design.object.chapter01.creature;
 
+import design.object.chapter01.behavior.FlyWithWings;
 import design.object.chapter01.behavior.Quack;
 
 /**
@@ -8,7 +9,7 @@ import design.object.chapter01.behavior.Quack;
 public class MallardDuck extends Duck {
 
     public MallardDuck() {
-        this.flyBehavior = null;
+        this.flyBehavior = new FlyWithWings();
         this.quackBehavior = new Quack();
     }
 
