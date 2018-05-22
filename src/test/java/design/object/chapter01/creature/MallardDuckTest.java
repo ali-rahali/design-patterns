@@ -1,5 +1,7 @@
 package design.object.chapter01.creature;
 
+import design.object.chapter01.behavior.FlyNoWay;
+import design.object.chapter01.behavior.Squeak;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -58,5 +60,37 @@ public class MallardDuckTest {
         MallardDuck mallardDuck = new MallardDuck();
         mallardDuck.quack();
         Assert.assertEquals(String.format("Quack!%n"), customOutputStream.toString());
+    }
+
+    /**
+     * Tests whether it's possible to change flying behavior of a {@link Duck}
+     */
+    @Test
+    public void shouldChangeFlyBehavior() {
+        MallardDuck mallardDuck = new MallardDuck();
+        mallardDuck.fly();
+        String defaultFlyingBehavior = customOutputStream.toString();
+
+        mallardDuck.setFlyBehavior(new FlyNoWay());
+        mallardDuck.fly();
+        String newFlyingBehavior = customOutputStream.toString();
+
+        Assert.assertNotEquals(defaultFlyingBehavior, newFlyingBehavior);
+    }
+
+    /**
+     * Tests whether it's possible to change quacking behavior of a {@link Duck}
+     */
+    @Test
+    public void shouldChangeQuackBehavior() {
+        MallardDuck mallardDuck = new MallardDuck();
+        mallardDuck.quack();
+        String defaultQuackingBehavior = customOutputStream.toString();
+
+        mallardDuck.setQuackBehavior(new Squeak());
+        mallardDuck.quack();
+        String newQuackingBehavior = customOutputStream.toString();
+
+        Assert.assertNotEquals(defaultQuackingBehavior, newQuackingBehavior);
     }
 }

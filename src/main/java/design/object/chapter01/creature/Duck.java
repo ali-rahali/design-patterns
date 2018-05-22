@@ -12,6 +12,24 @@ public abstract class Duck {
     QuackBehavior quackBehavior;
 
     /**
+     * Changes flying behavior of a {@link Duck} instance on the fly
+     *
+     * @param flyBehavior - new flying behavior to be used to {@link Duck}
+     */
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    /**
+     * Changes quacking behavior of a {@link Duck} instance on the fly
+     *
+     * @param quackBehavior - new quacking behavior to be used to {@link Duck}
+     */
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
+
+    /**
      * Prints how duck looks
      */
     public abstract void display();
