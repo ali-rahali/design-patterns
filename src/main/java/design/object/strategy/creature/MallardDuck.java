@@ -1,7 +1,7 @@
-package design.object.chapter01.creature;
+package design.object.strategy.creature;
 
-import design.object.chapter01.behavior.FlyWithWings;
-import design.object.chapter01.behavior.Quack;
+import design.object.strategy.behavior.FlyWithWings;
+import design.object.strategy.behavior.Quack;
 
 /**
  * Most common wild duck

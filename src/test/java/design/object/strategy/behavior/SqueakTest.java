@@ -1,4 +1,4 @@
-package design.object.chapter01.behavior;
+package design.object.strategy.behavior;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -9,9 +9,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 /**
- * Tests how a {@link MuteQuack} should {@link MuteQuack#quack()}
+ * Tests how a {@link Squeak} should {@link Squeak#quack()}
  */
-public class MuteQuackTest {
+public class SqueakTest {
     private final ByteArrayOutputStream customOutputStream = new ByteArrayOutputStream();
 
     /**
@@ -34,9 +34,9 @@ public class MuteQuackTest {
      * Tests silence of a {@link MuteQuack} quacking method
      */
     @Test
-    public void shouldNotQuack() {
-        QuackBehavior quackBehavior = new MuteQuack();
+    public void shouldSqueak() {
+        QuackBehavior quackBehavior = new Squeak();
         quackBehavior.quack();
-        Assert.assertEquals(String.format("...%n"), customOutputStream.toString());
+        Assert.assertEquals(String.format("Squeak!%n"), customOutputStream.toString());
     }
 }

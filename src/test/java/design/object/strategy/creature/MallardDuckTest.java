@@ -1,7 +1,7 @@
-package design.object.chapter01.creature;
+package design.object.strategy.creature;
 
-import design.object.chapter01.behavior.FlyNoWay;
-import design.object.chapter01.behavior.Squeak;
+import design.object.strategy.behavior.FlyNoWay;
+import design.object.strategy.behavior.Squeak;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
