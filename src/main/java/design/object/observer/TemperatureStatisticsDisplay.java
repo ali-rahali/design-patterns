@@ -33,13 +33,12 @@ public class TemperatureStatisticsDisplay implements Observer, Display {
         this.sumTemp += temperature;
         this.updatesCount++;
 
-        this.minTemp = this.minTemp < temperature
-                ? this.minTemp
-                : temperature;
-
-        this.maxTemp = this.maxTemp > temperature
-                ? this.maxTemp
-                : temperature;
+        if (this.minTemp > temperature) {
+            this.minTemp = temperature;
+        }
+            if (this.maxTemp < temperature) {
+            this.maxTemp = temperature;
+        }
 
         display();
     }
