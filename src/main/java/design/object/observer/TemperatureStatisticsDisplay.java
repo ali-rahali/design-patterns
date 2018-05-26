@@ -25,7 +25,7 @@ public class TemperatureStatisticsDisplay implements Observer, Display {
     @Override
     public void display() {
         System.out.println(String.format("Average temp: '%s', minimal temp: '%s', maximal temp: '%s'",
-                sumTemp / updatesCount, minTemp, maxTemp));
+                sumTemp / (updatesCount == 0.0 ? 1 : updatesCount), minTemp, maxTemp));
     }
 
     @Override
@@ -36,7 +36,7 @@ public class TemperatureStatisticsDisplay implements Observer, Display {
         if (this.minTemp > temperature) {
             this.minTemp = temperature;
         }
-            if (this.maxTemp < temperature) {
+        if (this.maxTemp < temperature) {
             this.maxTemp = temperature;
         }
 
