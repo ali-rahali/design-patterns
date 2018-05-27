@@ -1,4 +1,4 @@
-package design.object.chapter01.behavior;
+package design.object.strategy.behavior;
 
 import org.junit.After;
 import org.junit.Assert;

@@ -1,7 +1,7 @@
-package design.object.chapter01.creature;
+package design.object.strategy.creature;
 
-import design.object.chapter01.behavior.FlyNoWay;
-import design.object.chapter01.behavior.Quack;
+import design.object.strategy.behavior.FlyNoWay;
+import design.object.strategy.behavior.Quack;
 
 /**
  * Toy duck which resembles real one

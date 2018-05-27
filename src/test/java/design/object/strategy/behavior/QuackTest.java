@@ -1,4 +1,4 @@
-package design.object.chapter01.behavior;
+package design.object.strategy.behavior;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -9,9 +9,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 /**
- * Tests if a rocket is used properly
+ * Tests how a {@link Quack} should {@link Quack#quack()}
  */
-public class RocketPoweredTest {
+public class QuackTest {
     private final ByteArrayOutputStream customOutputStream = new ByteArrayOutputStream();
 
     /**
@@ -31,12 +31,12 @@ public class RocketPoweredTest {
     }
 
     /**
-     * Tests that {@link RocketPowered} flying behavior has to use rocket
+     * Tests quacking of a {@link Quack} instance
      */
     @Test
-    public void shouldUseRocket() {
-        FlyBehavior flyBehavior = new RocketPowered();
-        flyBehavior.fly();
-        Assert.assertEquals(String.format("On rocket to the space!%n"), customOutputStream.toString());
+    public void shouldQuack() {
+        QuackBehavior quackBehavior = new Quack();
+        quackBehavior.quack();
+        Assert.assertEquals(String.format("Quack!%n"), customOutputStream.toString());
     }
 }

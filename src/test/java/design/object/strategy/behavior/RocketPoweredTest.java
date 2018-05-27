@@ -1,4 +1,4 @@
-package design.object.chapter01.creature;
+package design.object.strategy.behavior;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -9,9 +9,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 /**
- * Tests basic functionality offered by {@link Duck} class
+ * Tests if a rocket is used properly
  */
-public class DuckTest {
+public class RocketPoweredTest {
     private final ByteArrayOutputStream customOutputStream = new ByteArrayOutputStream();
 
     /**
@@ -31,12 +31,12 @@ public class DuckTest {
     }
 
     /**
-     * Tests swimming capabilities
+     * Tests that {@link RocketPowered} flying behavior has to use rocket
      */
     @Test
-    public void shouldPrintSwimming() {
-        Duck duck = new MallardDuck();
-        duck.swim();
-        Assert.assertEquals(String.format("Swimming%n"), customOutputStream.toString());
+    public void shouldUseRocket() {
+        FlyBehavior flyBehavior = new RocketPowered();
+        flyBehavior.fly();
+        Assert.assertEquals(String.format("On rocket to the space!%n"), customOutputStream.toString());
     }
 }

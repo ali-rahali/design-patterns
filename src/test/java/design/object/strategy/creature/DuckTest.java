@@ -1,4 +1,4 @@
-package design.object.chapter01.behavior;
+package design.object.strategy.creature;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -9,9 +9,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 /**
- * Tests how a {@link Squeak} should {@link Squeak#quack()}
+ * Tests basic functionality offered by {@link Duck} class
  */
-public class SqueakTest {
+public class DuckTest {
     private final ByteArrayOutputStream customOutputStream = new ByteArrayOutputStream();
 
     /**
@@ -31,12 +31,12 @@ public class SqueakTest {
     }
 
     /**
-     * Tests silence of a {@link MuteQuack} quacking method
+     * Tests swimming capabilities
      */
     @Test
-    public void shouldSqueak() {
-        QuackBehavior quackBehavior = new Squeak();
-        quackBehavior.quack();
-        Assert.assertEquals(String.format("Squeak!%n"), customOutputStream.toString());
+    public void shouldPrintSwimming() {
+        Duck duck = new MallardDuck();
+        duck.swim();
+        Assert.assertEquals(String.format("Swimming%n"), customOutputStream.toString());
     }
 }

@@ -1,4 +1,4 @@
-package design.object.chapter01.behavior;
+package design.object.strategy.behavior;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -9,9 +9,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 /**
- * Tests how a {@link Quack} should {@link Quack#quack()}
+ * Tests how a {@link FlyNoWay} offers to {@link FlyNoWay#fly}
  */
-public class QuackTest {
+public class FlyNoWayTest {
     private final ByteArrayOutputStream customOutputStream = new ByteArrayOutputStream();
 
     /**
@@ -31,12 +31,12 @@ public class QuackTest {
     }
 
     /**
-     * Tests quacking of a {@link Quack} instance
+     * Tests that a {@link FlyNoWay} doesn't offers means to fly
      */
     @Test
-    public void shouldQuack() {
-        QuackBehavior quackBehavior = new Quack();
-        quackBehavior.quack();
-        Assert.assertEquals(String.format("Quack!%n"), customOutputStream.toString());
+    public void shouldNotFly() {
+        FlyBehavior flyBehavior = new FlyNoWay();
+        flyBehavior.fly();
+        Assert.assertEquals(String.format("Can't fly!%n"), customOutputStream.toString());
     }
 }

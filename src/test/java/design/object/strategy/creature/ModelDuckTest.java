@@ -1,4 +1,4 @@
-package design.object.chapter01.creature;
+package design.object.strategy.creature;
 
 import org.junit.After;
 import org.junit.Assert;

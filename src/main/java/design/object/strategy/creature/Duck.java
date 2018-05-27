@@ -1,7 +1,7 @@
-package design.object.chapter01.creature;
+package design.object.strategy.creature;
 
-import design.object.chapter01.behavior.FlyBehavior;
-import design.object.chapter01.behavior.QuackBehavior;
+import design.object.strategy.behavior.FlyBehavior;
+import design.object.strategy.behavior.QuackBehavior;
 
 /**
  * Class specifies characteristics and actions which any duck creature might perform
