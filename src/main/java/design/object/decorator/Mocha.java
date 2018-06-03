@@ -14,7 +14,7 @@ public class Mocha extends Condiment {
 
     @Override
     public String getDescription() {
-        return String.join(" ,", this.beverage.getDescription(), this.description);
+        return String.join(", ", this.beverage.getDescription(), this.description);
     }
 
     @Override

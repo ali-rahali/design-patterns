@@ -88,6 +88,9 @@ public class TemperatureStatisticsDisplayTest {
                 sum / (updatesCount == 0.0 ? 1 : updatesCount), 0.0, maxTemp), customOutputStream.toString());
     }
 
+    /**
+     * Update invocation should trigger change of what is displayed
+     */
     @Test
     public void shouldUpdateMinTemp() {
         TemperatureStatisticsDisplay display = new TemperatureStatisticsDisplay(new WeatherData());
