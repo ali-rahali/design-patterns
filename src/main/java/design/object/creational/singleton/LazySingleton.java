@@ -10,7 +10,7 @@ public class LazySingleton {
     /**
      * Private field to hold singleton instance
      */
-    private LazySingleton singletonInstance;
+    private static LazySingleton singletonInstance;
 
     /**
      * Restriction to create instances
@@ -21,7 +21,7 @@ public class LazySingleton {
     /**
      * Public access point
      */
-    public LazySingleton getSingletonInstance() {
+    public static LazySingleton getSingletonInstance() {
         if (singletonInstance == null) {
             singletonInstance = new LazySingleton();
         }
