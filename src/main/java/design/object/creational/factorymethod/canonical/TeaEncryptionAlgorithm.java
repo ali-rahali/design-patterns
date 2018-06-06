@@ -1,9 +1,9 @@
-package design.object.creational.factorymethod;
+package design.object.creational.factorymethod.canonical;
 
 /**
  * Concrete product in terms of factory pattern algorithm
  */
-public class IdeaEncryptionAlgorithm implements EncryptionAlgorithm {
+public class TeaEncryptionAlgorithm implements EncryptionAlgorithm {
 
     @Override
     public String encrypt(String plainText) {

@@ -1,4 +1,4 @@
-package design.object.creational.factorymethod;
+package design.object.creational.factorymethod.canonical;
 
 /**
  * Product interface in terminology of factory method pattern

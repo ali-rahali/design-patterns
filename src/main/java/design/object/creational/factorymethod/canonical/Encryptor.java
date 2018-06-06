@@ -1,4 +1,4 @@
-package design.object.creational.factorymethod;
+package design.object.creational.factorymethod.canonical;
 
 import java.io.FileOutputStream;
 import java.io.OutputStream;
