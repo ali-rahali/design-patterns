@@ -15,7 +15,7 @@ public abstract class Condiment extends Beverage {
     }
 
     /**
-     * Overridden was made to make specify custom description for a {@link Condiment} subclass
+     * Overridden was made to specify custom description for a {@link Condiment} subclass
      */
     @Override
     public abstract String getDescription();
