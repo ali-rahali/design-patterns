@@ -22,6 +22,13 @@ public class Forest {
     }
 
     /**
+     * Digs out tree from the forest
+     */
+    public void digOutTree(Tree tree) {
+        forest.remove(tree);
+    }
+
+    /**
      * Renders the whole forest
      */
     public void render() {
