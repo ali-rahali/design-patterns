@@ -8,3 +8,5 @@
 #### What is the main goal of this repository, one might ask?
 #### It's always good idea to learn something new, and, actually, without knowing design patterns it's impossible to create robust applications.
 #### So I've decided to study aforementioned books to level up my software expertise.
+#### As for 16.06.2018 familiarized myself with all design patterns, created several examples for each, added some unit tests.
+#### ATM stopped to commit to this repository and switching to learn some java related frameworks.
